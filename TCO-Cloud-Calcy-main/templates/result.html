@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+
+    <title>Cloud Calcy - Recommendation Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #4CAF50; /* Green color */
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav {
+            background-color: #2c3e50; /* Dark blue color */
+            overflow: hidden;
+        }
+
+        nav a {
+            float: right;
+            display: block;
+            color: #ecf0f1; /* Light gray color */
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #45a049; /* Darker green color */
+            color: white;
+        }
+
+        section {
+            margin: 20px;
+        }
+
+        h2 {
+            color: #5f5d5d; /* Dark gray color */
+        }
+
+        .providers-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .provider-info {
+            border: 2px solid #4CAF50; /* Green border */
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            width: 30%;
+            box-sizing: border-box;
+            background-color: #fff; /* White background */
+        }
+
+        p {
+            color: #5f5d5d;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cloud Calcy</h1>
+        <h2>Recommendation Result</h2>
+    </header>
+
+    <nav>
+        <div class="link">
+            <a href="{{ url_for('index') }}">Awareness</a>
+            <a href="{{ url_for('index2') }}">Calculator</a>
+            <a href="{{ url_for('login') }}">Login</a>
+        </div>
+    </nav>
+
+    <section>
+        <h2>Top 3 Recommended Cloud Providers:</h2>
+        <div class="providers-container">
+            {% for provider in top_providers %}
+                <div class="provider-info">
+                    <h3>{{ provider }}</h3>
+                    <p>IOPS: {{ df[df['Cloud Provider'] == provider]['IOPS'].values[0] }}</p>
+                    <p>vCPUs: {{ df[df['Cloud Provider'] == provider]['vCPUs'].values[0] }}</p>
+                    <p>RAM (GB): {{ df[df['Cloud Provider'] == provider]['RAM (GB)'].values[0] }}</p>
+                    <p>Network Bandwidth (Gbps): {{ df[df['Cloud Provider'] == provider]['Network Bandwidth (Gbps)'].values[0] }}</p>
+                    <p>Backup Ratio: {{ df[df['Cloud Provider'] == provider]['Backup Ratio'].values[0] }}</p>
+                    <p>Dedupe Ratio: {{ df[df['Cloud Provider'] == provider]['Dedupe Ratio'].values[0] }}</p>
+                    <p>Total Cost for 2 Years (USD): {{ df[df['Cloud Provider'] == provider]['Total Cost for 2 Years (USD)'].values[0] }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,16 @@
+Cloud Provider,IOPS,vCPUs,RAM (GB),Network Bandwidth (Gbps),Backup Ratio,Dedupe Ratio,Total Cost for 2 Years (USD)
+AWS,5000,8,16,1,3,10,50000
+Azure,6000,6,12,0.5,2,8,48000
+Google Cloud,7000,4,8,2,4,12,55000
+IBM Cloud,8000,10,32,1.5,4,15,60000
+Oracle Cloud,9000,12,64,2.5,5,18,65000
+Alibaba Cloud,10000,16,128,3,5,20,70000
+DigitalOcean,4000,2,4,1,2,6,30000
+Vultr,4500,4,8,1.5,3,8,35000
+Linode,5500,6,16,2,4,10,40000
+Scaleway,6000,8,32,2.5,5,12,45000
+Microsoft Azure,7500,8,16,2,3,10,52000
+IBM Cloud,8500,6,12,1.5,2,8,49000
+Oracle Cloud,9500,4,8,1,4,15,59000
+Alibaba Cloud,11000,10,32,2,5,18,62000
+DigitalOcean,5000,12,64,2.5,5,20,67000

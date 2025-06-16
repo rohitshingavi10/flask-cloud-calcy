@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='awarness.css') }}">
+</head>
+<body>
+    <!-- <div id="minicircle"></div> -->
+    <div id="main">
+        <div id="heading">
+            <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='logo.png') }}" alt=""></a>
+            <h1>The Awareness Section</h1>
+        </div>
+        <div class="aws">
+            <h2>ADD INFO</h2>
+            <div id="second">
+                <div class="elem">
+                    <img src="{{ url_for('static', filename='food.png') }}" alt="">
+                    <div class="textabout">
+                        <h1>ADD INFO</h1>
+                        <h4>ADD INFO</h4>
+                    </div>
+                </div>
+                <div class="elem">
+                    <img src="{{ url_for('static', filename='indoor.png') }}" alt="">
+                    <div class="textabout">
+                        <h1>ADD INFO</h1>
+                        <h4>ADD INFO</h4>
+                    </div>
+                </div>
+                <div class="elem">
+                    <img src="{{ url_for('static', filename='less.png') }}" alt="">
+                    <div class="textabout">
+                        <h1>ADD INFO</h1>
+                        <h4>ADD INFO</h4>
+                    </div>
+                </div>
+                <div class="elem">
+                    <img src="{{ url_for('static', filename='save.png') }}" alt="">
+                    <div class="textabout">
+                        <h1>ADD INFO</h1>
+                        <h4>ADD INFO</h4>
+                    </div>
+                </div>
+                <div class="elem">
+                    <img src="{{ url_for('static', filename='buy.png') }}" alt="">
+                    <div class="textabout">
+                        <h1>ADD INFO</h1>
+                        <h4>ADD INFO</h4>
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+        <div class="third">
+            <div class="video_sec">
+                <h1>ADD INFO</h1>
+                <div class="youtube">
+                    <iframe width="800" height="500" src="" 
+                    title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen></iframe>
+                </div>
+                <div class="info"></div>
+            </div>
+        </div> 
+    </div>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+    <!-- <script src="awareness.js"></script> -->
+</body>
+</html>

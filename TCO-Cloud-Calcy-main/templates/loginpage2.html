@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Calcy - Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #ffb700;
+            color: #ffffff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        form {
+            margin: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 150px;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+
+        button {
+            background-color: #ffb700;
+            color: #ffffff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ffb700;
+        }
+    </style>
+</head>
+<body>
+    <div id="minicircle"></div>
+    <header>
+        <h1>Cloud Calcy</h1>
+        <h2>Login</h2>
+    </header>
+
+    <form action="{{ url_for('login') }}" method="post">
+        <!-- Add input fields for user parameters -->
+        <br><br><br>
+        <label for="username">Username:</label>
+        <input type="text" name="username" required>
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" required>
+        <br><br>
+
+        <button type="submit">Sign In</button>
+        <button type="reset">Clear</button>
+        <button onclick="window.location.href = '{{ url_for('index') }}';">Go Back</button>
+    </form>
+</body>
+</html>
